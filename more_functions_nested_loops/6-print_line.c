@@ -2,10 +2,20 @@
 
 /**
  * print_line - draws a straight line in the terminal
+ * @n: number of times the character should be printed
  *
  * Return: void
  */
 void print_line(int n)
 {
-
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (n = 0; n < n; n++)
+			_putchar('_');
+		_putchar('\n');
+	}
 }
