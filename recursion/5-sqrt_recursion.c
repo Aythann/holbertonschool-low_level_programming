@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * helper - aide récursive pour trouver la racine carrée
+ * _sqrt_helper - aide récursive pour trouver la racine carrée
  * @n: nombre dont on cherche la racine
  * @i: essai courant
  *
  * Return: racine carrée naturelle ou -1 si inexistante
  */
-int helper(int n, int i)
+int _sqrt_helper(int n, int i)
 {
 	if (i * i == n)
 		return (i);
 	if (i * i > n)
 		return (-1);
-	return (helper(n, i + 1));
+	return (_sqrt_helper(n, i + 1));
 }
 
 /**
