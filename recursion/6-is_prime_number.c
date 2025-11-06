@@ -1,17 +1,32 @@
 #include "main.h"
 
 /**
- * check_prime - helper function to check divisibility
- * @n: number to test
- * @i: divisor
+ * _check_prime - teste récursivement si un nombre est premier
+ * @n: nombre à tester
+ * @i: diviseur courant
  *
- * Return: 1 if prime, 0 otherwise
+ * Return: 1 si premier, 0 sinon
  */
-int check_prime(int n, int i)
+int _check_prime(int n, int i)
 {
-	if (i * i > n)
-		return (1);
 	if (n % i == 0)
 		return (0);
-	return (check_prime(n, i + 1));
+	if (i * i > n)
+		return (1);
+	return (_check_prime(n, i + 1));
+}
+
+/**
+ * is_prime_number - vérifie si un nombre est premier
+ * @n: nombre à tester
+ *
+ * Return: 1 si premier, 0 sinon
+ */
+int is_prime_number(int n)
+{
+	if (n <= 1)
+		return (0);
+	if (n == 2)
+		return (1);
+	return (_check_prime(n, 2));
 }
