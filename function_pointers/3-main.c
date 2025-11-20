@@ -3,7 +3,11 @@
 #include "3-calc.h"
 
 /**
- * main - simple calculator
+ * main - simple calculator using function pointers
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: 0 on success, or exits with status code on error
  */
 int main(int argc, char *argv[])
 {
